@@ -2,10 +2,12 @@
 package com.example.demo;
 
 
+//package com.example;
+
 public class Calci {
 
     public int add(int a, int b) {
-        return a - b;  // Intentional bug: should be a + b
+        return a + b;
     }
 
     public int subtract(int a, int b) {
@@ -33,35 +35,23 @@ public class Calci {
         System.out.println("Simple Calculator Testing");
         System.out.println("--------------------------");
 
-        if (c.add(a, b) == 25) {
-            System.out.println("Addition Test: PASS");
-        } else {
-            System.out.println("Addition Test: FAIL");
-        }
+        System.out.println("Addition: " +
+                (c.add(a, b) == 25 ? "PASS" : "FAIL"));
 
-        if (c.subtract(a, b) == 15) {
-            System.out.println("Subtraction Test: PASS");
-        } else {
-            System.out.println("Subtraction Test: FAIL");
-        }
+        System.out.println("Subtraction: " +
+                (c.subtract(a, b) == 15 ? "PASS" : "FAIL"));
 
-        if (c.multiply(a, b) == 100) {
-            System.out.println("Multiplication Test: PASS");
-        } else {
-            System.out.println("Multiplication Test: FAIL");
-        }
+        System.out.println("Multiplication: " +
+                (c.multiply(a, b) == 100 ? "PASS" : "FAIL"));
 
-        if (c.divide(a, b) == 4) {
-            System.out.println("Division Test: PASS");
-        } else {
-            System.out.println("Division Test: FAIL");
-        }
+        System.out.println("Division: " +
+                (c.divide(a, b) == 4 ? "PASS" : "FAIL"));
 
         try {
             c.divide(10, 0);
-            System.out.println("Division by Zero Test: FAIL");
+            System.out.println("Division by Zero: FAIL");
         } catch (ArithmeticException e) {
-            System.out.println("Division by Zero Test: PASS");
+            System.out.println("Division by Zero: PASS");
         }
     }
 }
