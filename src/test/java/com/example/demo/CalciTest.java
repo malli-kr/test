@@ -10,8 +10,7 @@ public class CalciTest {
 
     @Test
     public void testAdd() {
-        assertEquals(30, c.add(10, 20)); 
-        // Intentionally incorrect expected result
+        assertEquals(30, c.add(10, 20));
     }
 
     @Test
