@@ -1,6 +1,7 @@
 package com.example.demo;
 
 
+
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
@@ -47,3 +48,4 @@ public class CalciTest {
         assertEquals(0, c.divide(0, 10));
     }
 }
+
